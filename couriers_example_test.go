@@ -3,7 +3,7 @@ package trackingmore_test
 import (
 	"context"
 	"fmt"
-	"trackingmore"
+	"github.com/trackingmores/trackingmore-sdk-go"
 )
 
 func ExampleClient_GetCouriers() {

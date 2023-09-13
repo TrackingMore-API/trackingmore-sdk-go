@@ -3,8 +3,8 @@ package trackingmore_test
 import (
 	"context"
 	"fmt"
+	"github.com/trackingmores/trackingmore-sdk-go"
 	"time"
-	"trackingmore"
 )
 
 func ExampleClient_CreateTracking() {
