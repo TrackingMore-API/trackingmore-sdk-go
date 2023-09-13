@@ -21,7 +21,8 @@ Contact: <manage@trackingmore.org>
 
 ## Installation
 
-Run the following command to require TrackingMore Go SDK
+trackingmore-sdk-go requires a Go version with [Modules](https://github.com/golang/go/wiki/Modules) support and uses import versioning. So please make sure to initialize a Go module before installing trackingmore-sdk-go:
+
 ```
 go mod init github.com/my/repo
 go get github.com/trackingmores/trackingmore-sdk-go
