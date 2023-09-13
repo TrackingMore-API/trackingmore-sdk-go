@@ -23,6 +23,7 @@ Contact: <manage@trackingmore.org>
 
 Run the following command to require TrackingMore Go SDK
 ```
+go mod init github.com/my/repo
 go get github.com/trackingmores/trackingmore-sdk-go
 ```
 
