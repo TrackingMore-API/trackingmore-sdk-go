@@ -1,10 +1,8 @@
 package trackingmore
 
 import (
-	"crypto/tls"
 	"errors"
 	"net/http"
-	"net/url"
 	"time"
 )
 
@@ -21,12 +19,7 @@ func NewClient(apiKey string) (*Client, error) {
 
 	client := &http.Client{
 		Timeout: 10 * time.Second,
-		Transport: &http.Transport{
-			TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
-		},
 	}
-	proxyURL, _ := url.Parse("http://192.168.2.198:7890")
-	client.Transport.(*http.Transport).Proxy = http.ProxyURL(proxyURL)
 	return &Client{
 		apiKey:     apiKey,
 		httpClient: client,
