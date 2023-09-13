@@ -1,0 +1,74 @@
+# Go build and binary files
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+*.app
+
+# Output directories
+/bin/
+/pkg/
+/test/
+/vendor/
+/release/
+
+# Environment configuration file
+.env
+
+# Dependency directories
+/vendor/
+/Godeps/
+/_vendor/
+/vendor.json
+/vendor/
+/Gopkg.lock
+/Gopkg.toml
+
+# Compiled Object files, Static and Dynamic libs
+*.o
+*.a
+*.so
+
+# Log files and crash dumps
+*.log
+*.log.*
+crash.log
+*.crash
+*.core
+
+# Temporary files and directories
+*.tmp
+*.swp
+*~
+*.tmp.*
+*.bak
+*.bkp
+*.d
+
+# Debugging/Profiling
+pprof
+trace
+.vscode
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Compiled Go binary
+*.exe
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# End of https://www.gitignore.io/api/go
