@@ -61,8 +61,6 @@ func (client *Client) sendApiRequest(ctx context.Context, method, path string, q
 	respBody := new(bytes.Buffer)
 	respBody.ReadFrom(resp.Body)
 
-	fmt.Println("Body:", respBody.String())
-
 	result := &Response{
 		Meta: Meta{},
 		Data: resultData,
