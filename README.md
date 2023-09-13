@@ -169,6 +169,7 @@ fmt.Println(result)
 ##### Get tracking results of multiple trackings.
 https://api.trackingmore.com/v4/trackings/get
 ```go
+// Perform queries based on various conditions
 //params := trackingmore.GetTrackingResultsParams{
 //	TrackingNumbers: "92612903029511573030094532",
 //	CourierCode:     "usps",
