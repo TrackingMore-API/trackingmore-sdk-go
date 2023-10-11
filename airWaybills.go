@@ -27,15 +27,8 @@ type AirWaybillItem struct {
 		Weight          string `json:"weight"`
 		Status          string `json:"status"`
 	} `json:"flight_info_new"`
-	FlightInfo struct {
-		PlanArrivalTime string `json:"plan_arrival_time"`
-		ArrivalTime     string `json:"arrival_time"`
-		ArrivalStation  string `json:"arrival_station"`
-		PlanDepartTime  string `json:"plan_depart_time"`
-		DepartTime      string `json:"depart_time"`
-		DepartStation   string `json:"depart_station"`
-	} `json:"flight_info"`
-	TrackInfo []struct {
+	FlightInfo map[string]FlightDetails `json:"flight_info"`
+	TrackInfo  []struct {
 		PlanDate     string `json:"plan_date"`
 		ActualDate   string `json:"actual_date"`
 		Event        string `json:"event"`
@@ -51,6 +44,15 @@ type AirWaybillItem struct {
 		TrackUrl      string `json:"track_url"`
 		TrackpageUrl2 string `json:"trackpage_url2"`
 	} `json:"airline_info"`
+}
+
+type FlightDetails struct {
+	DepartStation   string `json:"depart_station"`
+	ArrivalStation  string `json:"arrival_station"`
+	PlanDepartTime  string `json:"plan_depart_time"`
+	DepartTime      string `json:"depart_time"`
+	PlanArrivalTime string `json:"plan_arrival_time"`
+	ArrivalTime     string `json:"arrival_time"`
 }
 
 type AirWaybillParams struct {
