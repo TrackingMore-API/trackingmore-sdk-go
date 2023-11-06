@@ -16,12 +16,10 @@ func NewClient(apiKey string) (*Client, error) {
 	if apiKey == "" {
 		return nil, errors.New(ErrEmptyAPIKey)
 	}
-
-	client := &http.Client{
-		Timeout: 10 * time.Second,
-	}
 	return &Client{
-		apiKey:     apiKey,
-		httpClient: client,
+		apiKey: apiKey,
+		httpClient: &http.Client{
+			Timeout: 10 * time.Second,
+		},
 	}, nil
 }
