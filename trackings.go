@@ -222,13 +222,21 @@ func (client *Client) CreateTracking(ctx context.Context, params CreateTrackingP
 	}
 	var tracking Tracking
 	response, err := client.sendApiRequest(ctx, http.MethodPost, "/trackings/create", nil, params, &tracking)
-	return response, err
+	if err != nil {
+		return nil, err
+	}
+
+	return response, nil
 }
 
 func (client *Client) GetTrackingResults(ctx context.Context, params GetTrackingResultsParams) (*Response, error) {
 	var trackings []Tracking
 	response, err := client.sendApiRequest(ctx, http.MethodGet, "/trackings/get", params, nil, &trackings)
-	return response, err
+	if err != nil {
+		return nil, err
+	}
+
+	return response, nil
 }
 
 func (client *Client) BatchCreateTrackings(ctx context.Context, params []CreateTrackingParams) (*Response, error) {
@@ -245,7 +253,11 @@ func (client *Client) BatchCreateTrackings(ctx context.Context, params []CreateT
 	}
 	var batchResults BatchResults
 	response, err := client.sendApiRequest(ctx, http.MethodPost, "/trackings/batch", nil, params, &batchResults)
-	return response, err
+	if err != nil {
+		return nil, err
+	}
+
+	return response, nil
 }
 
 func (client *Client) UpdateTrackingByID(ctx context.Context, idString string, params UpdateTrackingParams) (*Response, error) {
@@ -254,7 +266,11 @@ func (client *Client) UpdateTrackingByID(ctx context.Context, idString string, p
 	}
 	var updateAfterItem UpdateAfterResult
 	response, err := client.sendApiRequest(ctx, http.MethodPut, "/trackings/update/"+idString, nil, params, &updateAfterItem)
-	return response, err
+	if err != nil {
+		return nil, err
+	}
+
+	return response, nil
 }
 
 func (client *Client) DeleteTrackingByID(ctx context.Context, idString string) (*Response, error) {
@@ -263,7 +279,11 @@ func (client *Client) DeleteTrackingByID(ctx context.Context, idString string) (
 	}
 	var tracking Tracking
 	response, err := client.sendApiRequest(ctx, http.MethodDelete, "/trackings/delete/"+idString, nil, nil, &tracking)
-	return response, err
+	if err != nil {
+		return nil, err
+	}
+
+	return response, nil
 }
 
 func (client *Client) RetrackTrackingByID(ctx context.Context, idString string) (*Response, error) {
@@ -272,5 +292,9 @@ func (client *Client) RetrackTrackingByID(ctx context.Context, idString string) 
 	}
 	var tracking Tracking
 	response, err := client.sendApiRequest(ctx, http.MethodPost, "/trackings/retrack/"+idString, nil, nil, &tracking)
-	return response, err
+	if err != nil {
+		return nil, err
+	}
+
+	return response, nil
 }

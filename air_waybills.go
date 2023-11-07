@@ -77,5 +77,9 @@ func (client *Client) CreateAnAirWayBill(ctx context.Context, params AirWaybillP
 
 	var airWaybillItem AirWaybillItem
 	response, err := client.sendApiRequest(ctx, http.MethodPost, "/awb", nil, params, &airWaybillItem)
-	return response, err
+	if err != nil {
+		return nil, err
+	}
+
+	return response, nil
 }

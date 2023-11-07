@@ -27,7 +27,11 @@ type DetectParams struct {
 func (client *Client) GetAllCouriers(ctx context.Context) (*Response, error) {
 	var couriers []Courier
 	response, err := client.sendApiRequest(ctx, http.MethodGet, "/couriers/all", nil, nil, &couriers)
-	return response, err
+	if err != nil {
+		return nil, err
+	}
+
+	return response, nil
 }
 
 func (client *Client) Detect(ctx context.Context, params DetectParams) (*Response, error) {
@@ -36,5 +40,9 @@ func (client *Client) Detect(ctx context.Context, params DetectParams) (*Respons
 	}
 	var couriers []Courier
 	response, err := client.sendApiRequest(ctx, http.MethodPost, "/couriers/detect", nil, params, &couriers)
-	return response, err
+	if err != nil {
+		return nil, err
+	}
+
+	return response, nil
 }
