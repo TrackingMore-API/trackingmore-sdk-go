@@ -1,7 +1,7 @@
 trackingmore-sdk-go
 =================
 
-The Go SDK of Trackingmore API
+The Go SDK of TrackingMore API
 
 Contact: <manage@trackingmore.org>
 
@@ -10,13 +10,13 @@ Contact: <manage@trackingmore.org>
 [Document](https://www.trackingmore.com/docs/trackingmore/d5ac362fc3cda-api-quick-start)
 
 ## Index
-1. [Installation](https://github.com/TrackingMores/trackingmore-sdk-go#installation)
-2. [Testing](https://github.com/TrackingMores/trackingmore-sdk-go#testing)
-3. [Error Handling](https://github.com/TrackingMores/trackingmore-sdk-go#error-handling)
+1. [Installation](https://github.com/TrackingMore-API/trackingmore-sdk-go#installation)
+2. [Testing](https://github.com/TrackingMore-API/trackingmore-sdk-go#testing)
+3. [Error Handling](https://github.com/TrackingMore-API/trackingmore-sdk-go#error-handling)
 4. SDK
-    1. [Couriers](https://github.com/TrackingMores/trackingmore-sdk-go#couriers)
-    2. [Trackings](https://github.com/TrackingMores/trackingmore-sdk-go#trackings)
-    3. [Air Waybill](https://github.com/TrackingMores/trackingmore-sdk-go#air-waybill)
+    1. [Couriers](https://github.com/TrackingMore-API/trackingmore-sdk-go#couriers)
+    2. [Trackings](https://github.com/TrackingMore-API/trackingmore-sdk-go#trackings)
+    3. [Air Waybill](https://github.com/TrackingMore-API/trackingmore-sdk-go#air-waybill)
 
 
 ## Installation
@@ -25,13 +25,13 @@ trackingmore-sdk-go requires a Go version with [Modules](https://github.com/gola
 
 ```
 go mod init github.com/my/repo
-go get github.com/trackingmores/trackingmore-sdk-go
+go get github.com/trackingmore-api/trackingmore-sdk-go
 ```
 
 Import:
 
 ``` go
-import "github.com/trackingmores/trackingmore-sdk-go"
+import "github.com/trackingmore-api/trackingmore-sdk-go"
 ```
 
 ## Quick Start
@@ -42,7 +42,7 @@ package main
 import (
 "context"
 "fmt"
-"github.com/trackingmores/trackingmore-sdk-go"
+"github.com/trackingmore-api/trackingmore-sdk-go"
 )
 
 func main() {

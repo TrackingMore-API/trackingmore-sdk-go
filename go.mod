@@ -1,4 +1,4 @@
-module github.com/trackingmores/trackingmore-sdk-go
+module github.com/trackingmore-api/trackingmore-sdk-go
 
 go 1.17
 
