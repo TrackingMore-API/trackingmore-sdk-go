@@ -6,7 +6,7 @@ import (
 )
 
 func TestCreateAnAirWayBill(t *testing.T) {
-	key := "you api key"
+	key := "your api key"
 	client, err := NewClient(key)
 	if err != nil {
 		t.Fatalf("Failed to create client: %v", err)

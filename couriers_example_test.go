@@ -7,7 +7,7 @@ import (
 )
 
 func ExampleClient_GetCouriers() {
-	key := "you api key"
+	key := "your api key"
 	cli, err := trackingmore.NewClient(key)
 
 	if err != nil {
@@ -34,7 +34,7 @@ func ExampleClient_GetCouriers() {
 }
 
 func ExampleClient_Detect() {
-	key := "you api key"
+	key := "your api key"
 	cli, err := trackingmore.NewClient(key)
 
 	if err != nil {

@@ -46,7 +46,7 @@ import (
 )
 
 func main() {
-   key := "you api key"
+   key := "your api key"
    cli, err := trackingmore.NewClient(key)
 
    if err != nil {
@@ -99,7 +99,7 @@ API Key is missing
 **Throw** by the parameter validation in function
 
 ```go
-cli, err := trackingmore.NewClient("you api key")
+cli, err := trackingmore.NewClient("your api key")
 
 if err != nil {
    fmt.Println(err)

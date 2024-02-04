@@ -6,7 +6,7 @@ import (
 )
 
 func TestNewClientWithValidAPIKey(t *testing.T) {
-	apiKey := "you api key"
+	apiKey := "your api key"
 	client, err := NewClient(apiKey)
 
 	if err != nil {

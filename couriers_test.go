@@ -6,7 +6,7 @@ import (
 )
 
 func TestGetAllCouriers(t *testing.T) {
-	key := "you api key"
+	key := "your api key"
 	client, err := NewClient(key)
 	if err != nil {
 		t.Fatalf("Failed to create client: %v", err)
@@ -26,7 +26,7 @@ func TestGetAllCouriers(t *testing.T) {
 }
 
 func TestDetect(t *testing.T) {
-	key := "you api key"
+	key := "your api key"
 	client, err := NewClient(key)
 	if err != nil {
 		t.Fatalf("Failed to create client: %v", err)

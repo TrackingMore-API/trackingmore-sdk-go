@@ -6,7 +6,7 @@ import (
 )
 
 func TestCreateTracking(t *testing.T) {
-	key := "you api key"
+	key := "your api key"
 	client, err := NewClient(key)
 	if err != nil {
 		t.Fatalf("Failed to create client: %v", err)
@@ -58,7 +58,7 @@ func TestCreateTracking(t *testing.T) {
 }
 
 func TestGetTrackingResults(t *testing.T) {
-	key := "you api key"
+	key := "your api key"
 	client, err := NewClient(key)
 	if err != nil {
 		t.Fatalf("Failed to create client: %v", err)
@@ -85,7 +85,7 @@ func TestGetTrackingResults(t *testing.T) {
 }
 
 func TestBatchCreateTrackings(t *testing.T) {
-	key := "you api key"
+	key := "your api key"
 	client, err := NewClient(key)
 	if err != nil {
 		t.Fatalf("Failed to create client: %v", err)
@@ -157,7 +157,7 @@ func TestBatchCreateTrackings(t *testing.T) {
 }
 
 func TestUpdateTrackingByID(t *testing.T) {
-	key := "you api key"
+	key := "your api key"
 	client, err := NewClient(key)
 	if err != nil {
 		t.Fatalf("Failed to create client: %v", err)
@@ -194,7 +194,7 @@ func TestUpdateTrackingByID(t *testing.T) {
 }
 
 func TestDeleteTrackingByID(t *testing.T) {
-	key := "you api key"
+	key := "your api key"
 	client, err := NewClient(key)
 	if err != nil {
 		t.Fatalf("Failed to create client: %v", err)
@@ -227,7 +227,7 @@ func TestDeleteTrackingByID(t *testing.T) {
 }
 
 func TestRetrackTrackingByID(t *testing.T) {
-	key := "you api key"
+	key := "your api key"
 	client, err := NewClient(key)
 	if err != nil {
 		t.Fatalf("Failed to create client: %v", err)

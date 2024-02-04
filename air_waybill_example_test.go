@@ -7,7 +7,7 @@ import (
 )
 
 func ExampleClient_CreateAnAirWayBill() {
-	key := "you api key"
+	key := "your api key"
 	cli, err := trackingmore.NewClient(key)
 
 	if err != nil {

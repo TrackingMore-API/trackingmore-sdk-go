@@ -8,7 +8,7 @@ import (
 )
 
 func ExampleClient_CreateTracking() {
-	key := "you api key"
+	key := "your api key"
 	cli, err := trackingmore.NewClient(key)
 
 	if err != nil {
@@ -38,7 +38,7 @@ func ExampleClient_CreateTracking() {
 }
 
 func ExampleClient_GetTrackingResults() {
-	key := "you api key"
+	key := "your api key"
 	cli, err := trackingmore.NewClient(key)
 
 	if err != nil {
@@ -85,7 +85,7 @@ func ExampleClient_GetTrackingResults() {
 }
 
 func ExampleClient_BatchCreateTrackings() {
-	key := "you api key"
+	key := "your api key"
 	cli, err := trackingmore.NewClient(key)
 
 	if err != nil {
@@ -129,7 +129,7 @@ func ExampleClient_BatchCreateTrackings() {
 }
 
 func ExampleClient_UpdateTrackingByID() {
-	key := "you api key"
+	key := "your api key"
 	cli, err := trackingmore.NewClient(key)
 
 	if err != nil {
@@ -160,7 +160,7 @@ func ExampleClient_UpdateTrackingByID() {
 }
 
 func ExampleClient_DeleteTrackingByID() {
-	key := "you api key"
+	key := "your api key"
 	cli, err := trackingmore.NewClient(key)
 
 	if err != nil {
@@ -187,7 +187,7 @@ func ExampleClient_DeleteTrackingByID() {
 }
 
 func ExampleClient_RetrackTrackingByID() {
-	key := "you api key"
+	key := "your api key"
 	cli, err := trackingmore.NewClient(key)
 
 	if err != nil {
