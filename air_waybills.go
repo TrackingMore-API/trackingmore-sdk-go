@@ -11,7 +11,7 @@ type AirWaybillItem struct {
 	AwbNumber        string   `json:"awb_number"`
 	AwbStatus        string   `json:"awb_status"`
 	AwbSubstatus     string   `json:"awb_substatus"`
-	StatusNumber     string   `json:"status_number"`
+	StatusNumber     int64    `json:"status_number"`
 	Weight           string   `json:"weight"`
 	Piece            string   `json:"piece"`
 	Origin           string   `json:"origin"`
