@@ -9,6 +9,8 @@ import (
 
 type AirWaybillItem struct {
 	AwbNumber        string   `json:"awb_number"`
+	AwbStatus        string   `json:"awb_status"`
+	AwbSubstatus     string   `json:"awb_substatus"`
 	StatusNumber     string   `json:"status_number"`
 	Weight           string   `json:"weight"`
 	Piece            string   `json:"piece"`
@@ -30,20 +32,22 @@ type AirWaybillItem struct {
 	} `json:"flight_info_new"`
 	FlightInfo map[string]FlightDetails `json:"flight_info"`
 	TrackInfo  []struct {
-		PlanDate     string `json:"plan_date"`
-		ActualDate   string `json:"actual_date"`
-		Event        string `json:"event"`
-		Station      string `json:"station"`
-		FlightNumber string `json:"flight_number"`
-		Status       string `json:"status"`
-		Piece        string `json:"piece"`
-		Weight       string `json:"weight"`
+		PlanDate            string `json:"plan_date"`
+		ActualDate          string `json:"actual_date"`
+		Event               string `json:"event"`
+		Station             string `json:"station"`
+		FlightNumber        string `json:"flight_number"`
+		Status              string `json:"status"`
+		Piece               string `json:"piece"`
+		Weight              string `json:"weight"`
+		CheckpointStatus    string `json:"checkpoint_status"`
+		CheckpointSubstatus string `json:"checkpoint_substatus"`
 	} `json:"track_info"`
 	AirlineInfo struct {
-		Name          string `json:"name"`
-		Url           string `json:"url"`
-		TrackUrl      string `json:"track_url"`
-		TrackpageUrl2 string `json:"trackpage_url2"`
+		Name         string `json:"name"`
+		Url          string `json:"url"`
+		TrackUrl     string `json:"track_url"`
+		TrackpageUrl string `json:"trackpage_url"`
 	} `json:"airline_info"`
 }
 

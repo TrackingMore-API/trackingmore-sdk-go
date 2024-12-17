@@ -15,6 +15,7 @@ type CreateTrackingParams struct {
 	CustomerName               string `json:"customer_name"`
 	CustomerEmail              string `json:"customer_email"`
 	CustomerSms                string `json:"customer_sms"`
+	RecipientPostcode          string `json:"recipient_postcode"`
 	Title                      string `json:"title"`
 	LogisticsChannel           string `json:"logistics_channel"`
 	OrderId                    string `json:"order_id"`
@@ -27,6 +28,7 @@ type CreateTrackingParams struct {
 	TrackingKey                string `json:"tracking_key"`
 	Language                   string `json:"language"`
 	Note                       string `json:"note"`
+	Label                      string `json:"label"`
 	AutoCorrect                string `json:"auto_correct"`
 }
 
@@ -56,10 +58,12 @@ type Tracking struct {
 	CustomerName               string `json:"customer_name"`
 	CustomerEmail              string `json:"customer_email"`
 	CustomerSms                string `json:"customer_sms"`
+	RecipientPostcode          string `json:"recipient_postcode"`
 	OrderId                    string `json:"order_id"`
 	Title                      string `json:"title"`
 	LogisticsChannel           string `json:"logistics_channel"`
 	Note                       string `json:"note"`
+	Label                      string `json:"label"`
 	SignedBy                   string `json:"signed_by"`
 	ServiceCode                string `json:"service_code"`
 	Weight                     string `json:"weight"`
@@ -176,6 +180,7 @@ type UpdateTrackingParams struct {
 	CustomerName               string `json:"customer_name"`
 	CustomerEmail              string `json:"customer_email"`
 	CustomerSms                string `json:"customer_sms"`
+	RecipientPostcode          string `json:"recipient_postcode"`
 	Title                      string `json:"title"`
 	LogisticsChannel           string `json:"logistics_channel"`
 	OrderId                    string `json:"order_id"`
@@ -188,6 +193,8 @@ type UpdateTrackingParams struct {
 	TrackingKey                string `json:"tracking_key"`
 	Language                   string `json:"language"`
 	Note                       string `json:"note"`
+	Label                      string `json:"label"`
+	ArchivedStatus             string `json:"archived_status"`
 }
 type UpdateAfterResult struct {
 	Id                         string `json:"id"`
@@ -208,9 +215,12 @@ type UpdateAfterResult struct {
 	CustomerName               string `json:"customer_name"`
 	CustomerEmail              string `json:"customer_email"`
 	CustomerSms                string `json:"customer_sms"`
+	RecipientPostcode          string `json:"recipient_postcode"`
 	Title                      string `json:"title"`
 	LogisticsChannel           string `json:"logistics_channel"`
 	Note                       string `json:"note"`
+	Label                      string `json:"label"`
+	ArchivedStatus             string `json:"archived_status"`
 }
 
 func (client *Client) CreateTracking(ctx context.Context, params CreateTrackingParams) (*Response, error) {
